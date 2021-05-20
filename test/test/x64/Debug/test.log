@@ -1,6 +1,1 @@
-﻿  level3.cpp
-  MyForm.cpp
-C:\Users\Ashwek\OneDrive\Bureau\test\test\test\level1.h(3124,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-  Génération de code en cours...
-  about.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
-  test.vcxproj -> C:\Users\Ashwek\OneDrive\Bureau\test\test\x64\Debug\test.exe
+﻿LINK : fatal error LNK1104: impossible d'ouvrir le fichier 'C:\Users\Ashwek\OneDrive\Bureau\test\test\x64\Debug\test.exe'

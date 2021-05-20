@@ -43,12 +43,19 @@ namespace test {
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Label^ label2;
 
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button3;
+
+
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::CheckBox^ checkBox1;
+
+
+
+
+
+
+	private: System::Windows::Forms::CheckBox^ checkBox2;
+	private: System::Windows::Forms::CheckBox^ checkBox3;
 
 
 	protected:
@@ -72,13 +79,11 @@ namespace test {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->panel1->SuspendLayout();
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -87,9 +92,9 @@ namespace test {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 22.2F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::Color::SkyBlue;
+			this->label1->ForeColor = System::Drawing::Color::CornflowerBlue;
 			this->label1->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->label1->Location = System::Drawing::Point(35, 165);
+			this->label1->Location = System::Drawing::Point(23, 215);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(361, 38);
 			this->label1->TabIndex = 0;
@@ -98,10 +103,10 @@ namespace test {
 			// 
 			// textBox1
 			// 
-			this->textBox1->BackColor = System::Drawing::SystemColors::Info;
+			this->textBox1->BackColor = System::Drawing::Color::Lavender;
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Proxima Nova Alt Rg", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(59, 251);
+			this->textBox1->Location = System::Drawing::Point(56, 296);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(288, 57);
@@ -113,46 +118,22 @@ namespace test {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::Color::Transparent;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Proxima Nova Alt Rg", 16.2F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+			this->label2->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 22.2F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label2->ForeColor = System::Drawing::Color::SkyBlue;
-			this->label2->Location = System::Drawing::Point(663, 144);
+			this->label2->ForeColor = System::Drawing::Color::CornflowerBlue;
+			this->label2->Location = System::Drawing::Point(606, 137);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(136, 34);
+			this->label2->Size = System::Drawing::Size(262, 38);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"difficulty ";
 			this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
 			// 
-			// button2
-			// 
-			this->button2->BackColor = System::Drawing::Color::LightSlateGray;
-			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
-			this->button2->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(647, 351);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(180, 68);
-			this->button2->TabIndex = 4;
-			this->button2->Text = L"intermediate";
-			this->button2->UseVisualStyleBackColor = false;
-			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
-			// 
-			// button3
-			// 
-			this->button3->BackColor = System::Drawing::Color::LightSlateGray;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(656, 489);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(153, 55);
-			this->button3->TabIndex = 5;
-			this->button3->Text = L"expert";
-			this->button3->UseVisualStyleBackColor = false;
-			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
-			// 
 			// button4
 			// 
 			this->button4->BackColor = System::Drawing::Color::Beige;
+			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
+			this->button4->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->button4->Location = System::Drawing::Point(42, 528);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(114, 41);
@@ -164,6 +145,9 @@ namespace test {
 			// button5
 			// 
 			this->button5->BackColor = System::Drawing::Color::Beige;
+			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
+			this->button5->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->button5->Location = System::Drawing::Point(208, 528);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(122, 41);
@@ -172,51 +156,74 @@ namespace test {
 			this->button5->UseVisualStyleBackColor = false;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
-			// panel1
+			// checkBox1
 			// 
-			this->panel1->BackColor = System::Drawing::Color::Black;
-			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
-			this->panel1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->panel1->Controls->Add(this->label3);
-			this->panel1->Location = System::Drawing::Point(647, 215);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(162, 73);
-			this->panel1->TabIndex = 8;
-			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::panel1_Paint);
+			this->checkBox1->Appearance = System::Windows::Forms::Appearance::Button;
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"checkBox1.BackgroundImage")));
+			this->checkBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 19.8F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->checkBox1->Location = System::Drawing::Point(626, 246);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(215, 43);
+			this->checkBox1->TabIndex = 9;
+			this->checkBox1->Text = L"Beginner";
+			this->checkBox1->UseVisualStyleBackColor = true;
+			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox1_CheckedChanged);
 			// 
-			// label3
+			// checkBox2
 			// 
-			this->label3->AutoSize = true;
-			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(18, 24);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(123, 20);
-			this->label3->TabIndex = 0;
-			this->label3->Text = L"Beginner";
+			this->checkBox2->Appearance = System::Windows::Forms::Appearance::Button;
+			this->checkBox2->AutoSize = true;
+			this->checkBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"checkBox2.BackgroundImage")));
+			this->checkBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 22.2F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->checkBox2->Location = System::Drawing::Point(571, 377);
+			this->checkBox2->Name = L"checkBox2";
+			this->checkBox2->Size = System::Drawing::Size(326, 48);
+			this->checkBox2->TabIndex = 10;
+			this->checkBox2->Text = L"intermediate";
+			this->checkBox2->UseVisualStyleBackColor = true;
+			this->checkBox2->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox2_CheckedChanged);
+			// 
+			// checkBox3
+			// 
+			this->checkBox3->Appearance = System::Windows::Forms::Appearance::Button;
+			this->checkBox3->AutoSize = true;
+			this->checkBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"checkBox3.BackgroundImage")));
+			this->checkBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->checkBox3->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 22.2F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->checkBox3->Location = System::Drawing::Point(640, 498);
+			this->checkBox3->Name = L"checkBox3";
+			this->checkBox3->Size = System::Drawing::Size(190, 48);
+			this->checkBox3->TabIndex = 11;
+			this->checkBox3->Text = L"Expert";
+			this->checkBox3->UseVisualStyleBackColor = true;
+			this->checkBox3->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox3_CheckedChanged);
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::DimGray;
+			this->BackColor = System::Drawing::Color::DarkOrchid;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(974, 619);
-			this->Controls->Add(this->panel1);
+			this->Controls->Add(this->checkBox3);
+			this->Controls->Add(this->checkBox2);
+			this->Controls->Add(this->checkBox1);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
-			this->Controls->Add(this->button3);
-			this->Controls->Add(this->button2);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox1);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
-			this->panel1->ResumeLayout(false);
-			this->panel1->PerformLayout();
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -252,40 +259,60 @@ namespace test {
 		if (textBox1->Text == "")
 		{
 			MessageBox::Show("pleaser enter your name", "warning", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+
 		}
+			if ((checkBox1->Checked==true))
+			{
+				level1^ lv = gcnew level1;
+				this->Hide();
+				lv->Show();
+			}
 
-		if ((textBox1->Text != "") && (panel1))
-		{
-			level1^ lv = gcnew level1;
-			this->Hide();
-			lv->Show();
-
-			if ((textBox1->Text != "") && (button2))
+			if ((checkBox2->Checked))
 			{
 
 
 				level2^ lv2 = gcnew level2;
 				this->Hide();
-				lv->Hide();
 				lv2->Show();
+			}
+			if ((checkBox3->Checked))
+			{
 
 
-				if ((textBox1->Text != "") && (button3))
+				level3^ lv3 = gcnew level3;
+				this->Hide();
+				lv3->Show();
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+			/*	if ((textBox1->Text != "") && (button3))
 				{
 
 
 					level3^ lv3 = gcnew level3;
 					this->Hide();
-					lv->Hide();
-					lv2->Hide();
-					lv3->Show();
-				}
-			}
 
-		}
+					lv3->Show();
+				}*/
+
+
+
+
+		
 	}
 
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e)
+	/*private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		{
 		 if (button2)
@@ -314,8 +341,30 @@ private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Form
 		button2->Enabled = false;
 		button3->Enabled = false;
 	}
-}
+}*/
 private: System::Void flowLayoutPanel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+
+	
+
+	checkBox2->Checked = false;
+	checkBox3->Checked = false;
+
+	
+
+}
+private: System::Void checkBox2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+
+
+	checkBox1->Checked = false;
+	checkBox3->Checked = false;
+}
+private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void checkBox3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	checkBox2->Checked = false;
+	checkBox1->Checked = false;
 }
 };
 

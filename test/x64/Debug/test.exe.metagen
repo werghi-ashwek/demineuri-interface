@@ -34,9 +34,19 @@ Class test.level1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
 Class test.level2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Lose(): PrivateScope, Public, HideBySig
+    Win(): PrivateScope, Public, HideBySig
+    Uncovertile(Int32): PrivateScope, Public, HideBySig
+    Bombs(): PrivateScope, Public, HideBySig
 Class test.level3: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Lose(): PrivateScope, Public, HideBySig
+    Win(): PrivateScope, Public, HideBySig
+    Uncovertile(Int32): PrivateScope, Public, HideBySig
+    Bombs(): PrivateScope, Public, HideBySig
 Class test.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

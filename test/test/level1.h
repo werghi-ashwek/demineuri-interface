@@ -71,11 +71,14 @@ namespace test {
 	private: System::Windows::Forms::Button^ button34;
 	private: System::Windows::Forms::Button^ button35;
 	private: System::Windows::Forms::Button^ button36;
-	private: System::Windows::Forms::Button^ button37;
+
 	private: System::Windows::Forms::CheckBox^ checkBox1;
 	private: System::Windows::Forms::ImageList^ imageList2;
 	private: System::Windows::Forms::ImageList^ imageList3;
 	private: System::Windows::Forms::ImageList^ imageList4;
+	private: System::Windows::Forms::Button^ button37;
+
+
 	private: System::Windows::Forms::Button^ button38;
 
 
@@ -113,10 +116,10 @@ namespace test {
 		}
 
 
-	private: System::Windows::Forms::Timer^ timer1;
 
 
-	private: System::Windows::Forms::Label^ label2;
+
+
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -135,8 +138,6 @@ namespace test {
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(level1::typeid));
-			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->imageList1 = (gcnew System::Windows::Forms::ImageList(this->components));
 			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -175,31 +176,14 @@ namespace test {
 			this->button34 = (gcnew System::Windows::Forms::Button());
 			this->button35 = (gcnew System::Windows::Forms::Button());
 			this->button36 = (gcnew System::Windows::Forms::Button());
-			this->button37 = (gcnew System::Windows::Forms::Button());
 			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
 			this->button38 = (gcnew System::Windows::Forms::Button());
 			this->imageList2 = (gcnew System::Windows::Forms::ImageList(this->components));
 			this->imageList3 = (gcnew System::Windows::Forms::ImageList(this->components));
 			this->imageList4 = (gcnew System::Windows::Forms::ImageList(this->components));
+			this->button37 = (gcnew System::Windows::Forms::Button());
 			this->flowLayoutPanel1->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// timer1
-			// 
-			this->timer1->Enabled = true;
-			this->timer1->Interval = 1000;
-			this->timer1->Tick += gcnew System::EventHandler(this, &level1::label2_Click);
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16));
-			this->label2->Location = System::Drawing::Point(436, 118);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(82, 31);
-			this->label2->TabIndex = 5;
-			this->label2->Text = L"00.00";
-			this->label2->Click += gcnew System::EventHandler(this, &level1::label2_Click);
 			// 
 			// imageList1
 			// 
@@ -211,6 +195,7 @@ namespace test {
 			// 
 			// flowLayoutPanel1
 			// 
+			this->flowLayoutPanel1->BackColor = System::Drawing::Color::Thistle;
 			this->flowLayoutPanel1->Controls->Add(this->button1);
 			this->flowLayoutPanel1->Controls->Add(this->button2);
 			this->flowLayoutPanel1->Controls->Add(this->button3);
@@ -247,7 +232,7 @@ namespace test {
 			this->flowLayoutPanel1->Controls->Add(this->button34);
 			this->flowLayoutPanel1->Controls->Add(this->button35);
 			this->flowLayoutPanel1->Controls->Add(this->button36);
-			this->flowLayoutPanel1->Location = System::Drawing::Point(307, 187);
+			this->flowLayoutPanel1->Location = System::Drawing::Point(271, 188);
 			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
 			this->flowLayoutPanel1->Size = System::Drawing::Size(348, 333);
 			this->flowLayoutPanel1->TabIndex = 6;
@@ -577,31 +562,28 @@ namespace test {
 			this->button36->UseVisualStyleBackColor = true;
 			this->button36->Click += gcnew System::EventHandler(this, &level1::button36_Click);
 			// 
-			// button37
-			// 
-			this->button37->Location = System::Drawing::Point(334, 593);
-			this->button37->Name = L"button37";
-			this->button37->Size = System::Drawing::Size(280, 46);
-			this->button37->TabIndex = 7;
-			this->button37->Text = L"start the game";
-			this->button37->UseVisualStyleBackColor = true;
-			this->button37->Click += gcnew System::EventHandler(this, &level1::button37_Click);
-			// 
 			// checkBox1
 			// 
 			this->checkBox1->AutoSize = true;
-			this->checkBox1->Location = System::Drawing::Point(760, 383);
+			this->checkBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"checkBox1.BackgroundImage")));
+			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 10.2F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->checkBox1->Location = System::Drawing::Point(668, 367);
 			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(157, 21);
+			this->checkBox1->Size = System::Drawing::Size(262, 21);
 			this->checkBox1->TabIndex = 8;
 			this->checkBox1->Text = L"check to set the flag";
 			this->checkBox1->UseVisualStyleBackColor = true;
+			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &level1::checkBox1_CheckedChanged);
 			// 
 			// button38
 			// 
-			this->button38->Location = System::Drawing::Point(760, 465);
+			this->button38->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button38.BackgroundImage")));
+			this->button38->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 7.8F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->button38->Location = System::Drawing::Point(668, 457);
 			this->button38->Name = L"button38";
-			this->button38->Size = System::Drawing::Size(170, 34);
+			this->button38->Size = System::Drawing::Size(262, 37);
 			this->button38->TabIndex = 9;
 			this->button38->Text = L"restart the game";
 			this->button38->UseVisualStyleBackColor = true;
@@ -626,6 +608,19 @@ namespace test {
 			this->imageList4->ImageSize = System::Drawing::Size(16, 16);
 			this->imageList4->TransparentColor = System::Drawing::Color::Transparent;
 			// 
+			// button37
+			// 
+			this->button37->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button37.BackgroundImage")));
+			this->button37->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button37->ForeColor = System::Drawing::Color::LightBlue;
+			this->button37->Location = System::Drawing::Point(346, 582);
+			this->button37->Name = L"button37";
+			this->button37->Size = System::Drawing::Size(188, 39);
+			this->button37->TabIndex = 7;
+			this->button37->Text = L"start the game";
+			this->button37->UseVisualStyleBackColor = true;
+			this->button37->Click += gcnew System::EventHandler(this, &level1::button37_Click);
+			// 
 			// level1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -633,11 +628,10 @@ namespace test {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(953, 661);
+			this->Controls->Add(this->button37);
 			this->Controls->Add(this->button38);
 			this->Controls->Add(this->checkBox1);
-			this->Controls->Add(this->button37);
 			this->Controls->Add(this->flowLayoutPanel1);
-			this->Controls->Add(this->label2);
 			this->Name = L"level1";
 			this->Text = L"level1";
 			this->Load += gcnew System::EventHandler(this, &level1::level1_Load);
@@ -1282,8 +1276,10 @@ public: Void Uncovertile(int x)
 		if (data[1] == 1)
 		{
 			button1->BackColor = System::Drawing::SystemColors::GrayText;
-			label2->Text = "You lose!";
-			label2->ForeColor = System::Drawing::Color::Red;
+			/*label2->Text = "You lose!";
+			label2->ForeColor = System::Drawing::Color::Red;*/
+			MessageBox::Show("GAME OVER,You lose!", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			checkBox1->Visible = false;
 			bomb = 1;
 		}
 		else
@@ -1318,8 +1314,10 @@ public: Void Uncovertile(int x)
 		if (data[2] == 1)
 		{
 			button2->BackColor = System::Drawing::SystemColors::GrayText;
-			label2->Text = "You lose!";
-			label2->ForeColor = System::Drawing::Color::Red;
+			/*label2->Text = "You lose!";
+			label2->ForeColor = System::Drawing::Color::Red;*/
+			MessageBox::Show("GAME OVER,You lose!", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			checkBox1->Visible = false;
 			bomb = 1;
 		}
 		else
@@ -1362,8 +1360,10 @@ public: Void Uncovertile(int x)
 		if (data[3] == 1)
 		{
 			button3->BackColor = System::Drawing::SystemColors::GrayText;
-			label2->Text = "You lose!";
-			label2->ForeColor = System::Drawing::Color::Red;
+			/*label2->Text = "You lose!";
+			label2->ForeColor = System::Drawing::Color::Red;*/
+			MessageBox::Show("GAME OVER,You lose!", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			checkBox1->Visible = false;
 			bomb = 1;
 		}
 		else
@@ -1406,8 +1406,10 @@ public: Void Uncovertile(int x)
 		if (data[4] == 1)
 		{
 			button4->BackColor = System::Drawing::SystemColors::GrayText;
-			label2->Text = "You lose!";
-			label2->ForeColor = System::Drawing::Color::Red;
+			/*label2->Text = "You lose!";
+			label2->ForeColor = System::Drawing::Color::Red;*/
+			MessageBox::Show("GAME OVER", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			checkBox1->Visible = false;
 			bomb = 1;
 		}
 		else
@@ -1500,7 +1502,7 @@ public: Void Uncovertile(int x)
 			/*label2->Text = "You lose!";
 			label2->ForeColor = System::Drawing::Color::Red;*/
 			bomb = 1;
-			MessageBox::Show("GAME OVER", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			MessageBox::Show("GAME OVER,You lose!", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
 			checkBox1->Visible = false;
 
 
@@ -1540,7 +1542,7 @@ public: Void Uncovertile(int x)
 			/*label2->Text = "You lose!";
 			label2->ForeColor = System::Drawing::Color::Red;*/
 			bomb = 1;
-			MessageBox::Show("GAME OVER", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			MessageBox::Show("GAME OVER,You lose!", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
 			checkBox1->Visible = false;
 
 
@@ -3099,7 +3101,7 @@ public: Void Uncovertile(int x)
 			button36->Text = System::Convert::ToString(k);
 		}
 	}
-	if (move == 29 && bomb == 0)//29= nb de case - nbmines
+	if (move == 29 && bomb == 0 && Second<30)//29= nb de case - nbmines
 	{   
 		MessageBox::Show("You Win!", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		checkBox1->Visible = false;
@@ -3107,7 +3109,7 @@ public: Void Uncovertile(int x)
 		label2->ForeColor = System::Drawing::SystemColors::MenuHighlight;*/
 		Win();
 	}
-	if (bomb != 0)
+	if (bomb != 0 || Second==30)
 		Lose();
 
 }
@@ -3136,403 +3138,593 @@ public: Void Bombs()
 
 	
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (checkBox1->Checked == true)
+
+		if (button37->Enabled == false)
 		{
-			if (button1->Text == "?")
-				button1->Text = "";
+			if (checkBox1->Checked == true)
+			{
+				button1->BackgroundImage = imageList2->Images[1];
+				button1->BackgroundImageLayout = ImageLayout::Stretch;
+			}
 			else
-				button1->Text = "?";
+				Uncovertile(1);
+
 		}
-		else
-			Uncovertile(1);
+		else {
+			MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (checkBox1->Checked == true)
+		if (button37->Enabled == false)
 		{
-			if (button2->Text == "?")
-				button2->Text = "";
+			if (checkBox1->Checked == true)
+			{
+				button2->BackgroundImage = imageList2->Images[1];
+				button2->BackgroundImageLayout = ImageLayout::Stretch;
+			}
 			else
-				button2->Text = "?";
+				Uncovertile(2);
+
 		}
-		else
-			Uncovertile(2);
+		else {
+			MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
 	}
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button3->Text == "?")
-			button3->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button3->BackgroundImage = imageList2->Images[1];
+			button3->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button3->Text = "?";
+			Uncovertile(3);
+
 	}
-	else
-		Uncovertile(3);
-}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
-	{   
-		button4->BackgroundImage = imageList2->Images[1];
-		button4->BackgroundImageLayout = ImageLayout::Stretch;
-		
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
-	else
-		Uncovertile(4);
+	
 }
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	if (button37->Enabled == false)
+	{
+		if (checkBox1->Checked == true)
+		{
+			button4->BackgroundImage = imageList2->Images[1];
+			button4->BackgroundImageLayout = ImageLayout::Stretch;
+		}
+		else
+			Uncovertile(4);
+
+	}
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
+
+	
+	
+}
+	   
+
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button5->Text == "?")
-			button5->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button5->BackgroundImage = imageList2->Images[1];
+			button5->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button5->Text = "?";
+			Uncovertile(5);
+
 	}
-	else
-		Uncovertile(5);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button6->Text == "?")
-			button6->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button6->BackgroundImage = imageList2->Images[1];
+			button6->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button6->Text = "?";
+			Uncovertile(6);
+
 	}
-	else
-		Uncovertile(6);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button7->Text == "?")
-			button7->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button7->BackgroundImage = imageList2->Images[1];
+			button7->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button7->Text = "?";
+			Uncovertile(7);
+
 	}
-	else
-		Uncovertile(7);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button8->Text == "?")
-			button8->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button8->BackgroundImage = imageList2->Images[1];
+			button8->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button8->Text = "?";
+			Uncovertile(8);
+
 	}
-	else
-		Uncovertile(8);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button9->Text == "?")
-			button9->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button9->BackgroundImage = imageList2->Images[1];
+			button9->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button9->Text = "?";
+			Uncovertile(9);
+
 	}
-	else
-		Uncovertile(9);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button10->Text == "?")
-			button10->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button10->BackgroundImage = imageList2->Images[1];
+			button10->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button10->Text = "?";
+			Uncovertile(10);
+
 	}
-	else
-		Uncovertile(10);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button11->Text == "?")
-			button11->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button11->BackgroundImage = imageList2->Images[1];
+			button11->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button11->Text = "?";
+			Uncovertile(11);
+
 	}
-	else
-		Uncovertile(11);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button12->Text == "?")
-			button12->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button12->BackgroundImage = imageList2->Images[1];
+			button12->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button12->Text = "?";
+			Uncovertile(12);
+
 	}
-	else
-		Uncovertile(12);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button13->Text == "?")
-			button13->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button13->BackgroundImage = imageList2->Images[1];
+			button13->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button13->Text = "?";
+			Uncovertile(13);
+
 	}
-	else
-		Uncovertile(13);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button14->Text == "?")
-			button14->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button14->BackgroundImage = imageList2->Images[1];
+			button14->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button14->Text = "?";
+			Uncovertile(14);
+
 	}
-	else
-		Uncovertile(14);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button15->Text == "?")
-			button15->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button15->BackgroundImage = imageList2->Images[1];
+			button15->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button15->Text = "?";
+			Uncovertile(15);
+
 	}
-	else
-		Uncovertile(15);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button16->Text == "?")
-			button16->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button16->BackgroundImage = imageList2->Images[1];
+			button16->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button16->Text = "?";
+			Uncovertile(16);
+
 	}
-	else
-		Uncovertile(16);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button17->Text == "?")
-			button17->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button17->BackgroundImage = imageList2->Images[1];
+			button17->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button17->Text = "?";
+			Uncovertile(17);
+
 	}
-	else
-		Uncovertile(17);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button18->Text == "?")
-			button18->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button18->BackgroundImage = imageList2->Images[1];
+			button18->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button18->Text = "?";
+			Uncovertile(18);
+
 	}
-	else
-		Uncovertile(18);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button19->Text == "?")
-			button19->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button19->BackgroundImage = imageList2->Images[1];
+			button19->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button19->Text = "?";
+			Uncovertile(19);
+
 	}
-	else
-		Uncovertile(19);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button20->Text == "?")
-			button20->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button20->BackgroundImage = imageList2->Images[1];
+			button20->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button20->Text = "?";
+			Uncovertile(20);
+
 	}
-	else
-		Uncovertile(20);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button21->Text == "?")
-			button21->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button21->BackgroundImage = imageList2->Images[1];
+			button21->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button21->Text = "?";
+			Uncovertile(21);
+
 	}
-	else
-		Uncovertile(21);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button22_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button22->Text == "?")
-			button22->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button22->BackgroundImage = imageList2->Images[1];
+			button22->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button22->Text = "?";
+			Uncovertile(22);
+
 	}
-	else
-		Uncovertile(22);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button23_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button23->Text == "?")
-			button23->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button23->BackgroundImage = imageList2->Images[1];
+			button23->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button23->Text = "?";
+			Uncovertile(23);
+
 	}
-	else
-		Uncovertile(23);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button24->Text == "?")
-			button24->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button24->BackgroundImage = imageList2->Images[1];
+			button24->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button24->Text = "?";
+			Uncovertile(24);
+
 	}
-	else
-		Uncovertile(24);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button25_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button25->Text == "?")
-			button25->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button25->BackgroundImage = imageList2->Images[1];
+			button25->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button25->Text = "?";
+			Uncovertile(25);
+
 	}
-	else
-		Uncovertile(25);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button26_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button26->Text == "?")
-			button26->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button26->BackgroundImage = imageList2->Images[1];
+			button26->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button26->Text = "?";
+			Uncovertile(26);
+
 	}
-	else
-		Uncovertile(26);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button27_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button27->Text == "?")
-			button27->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button27->BackgroundImage = imageList2->Images[1];
+			button27->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button27->Text = "?";
+			Uncovertile(27);
+
 	}
-	else
-		Uncovertile(27);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button28_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button28->Text == "?")
-			button28->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button28->BackgroundImage = imageList2->Images[1];
+			button28->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button28->Text = "?";
+			Uncovertile(28);
+
 	}
-	else
-		Uncovertile(28);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button29_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button29->Text == "?")
-			button29->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button29->BackgroundImage = imageList2->Images[1];
+			button29->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button29->Text = "?";
+			Uncovertile(29);
+
 	}
-	else
-		Uncovertile(29);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button30_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button30->Text == "?")
-			button30->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button30->BackgroundImage = imageList2->Images[1];
+			button30->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button30->Text = "?";
+			Uncovertile(30);
+
 	}
-	else
-		Uncovertile(30);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button31_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button31->Text == "?")
-			button31->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button31->BackgroundImage = imageList2->Images[1];
+			button31->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button31->Text = "?";
+			Uncovertile(31);
+
 	}
-	else
-		Uncovertile(31);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button32_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button32->Text == "?")
-			button32->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button32->BackgroundImage = imageList2->Images[1];
+			button32->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button32->Text = "?";
+			Uncovertile(32);
+
 	}
-	else
-		Uncovertile(32);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button33_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button33->Text == "?")
-			button33->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button33->BackgroundImage = imageList2->Images[1];
+			button33->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button33->Text = "?";
+			Uncovertile(33);
+
 	}
-	else
-		Uncovertile(33);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button34_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button34->Text == "?")
-			button34->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button34->BackgroundImage = imageList2->Images[1];
+			button34->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button34->Text = "?";
+			Uncovertile(34);
+
 	}
-	else
-		Uncovertile(34);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button35_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button35->Text == "?")
-			button35->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button35->BackgroundImage = imageList2->Images[1];
+			button35->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button35->Text = "?";
+			Uncovertile(35);
+
 	}
-	else
-		Uncovertile(35);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void button36_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked == true)
+	if (button37->Enabled == false)
 	{
-		if (button36->Text == "?")
-			button36->Text = "";
+		if (checkBox1->Checked == true)
+		{
+			button36->BackgroundImage = imageList2->Images[1];
+			button36->BackgroundImageLayout = ImageLayout::Stretch;
+		}
 		else
-			button36->Text = "?";
+			Uncovertile(36);
+
 	}
-	else
-		Uncovertile(36);
+	else {
+		MessageBox::Show(" start button is unclicked", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 
 private: System::Void button37_Click(System::Object^ sender, System::EventArgs^ e) {
 
+	//timer1->Enabled = true;
 	
 	Bombs();
 	
@@ -3589,8 +3781,42 @@ private: System::Void button37_Click(System::Object^ sender, System::EventArgs^ 
 	}
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
-	Second++;
+/*private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	
+	timer1->Enabled = false; 
+
+
+	if (button37->Enabled)
+	{
+		timer1->Enabled = true; 
+		timer1->Start();
+		//Second++;
+
+	
+
+		if (Second == 10) {
+
+			timer1->Stop();
+
+			Second = 0;
+			timer1->Enabled = false;
+			MessageBox::Show("GAME OVER", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+
+		}
+
+
+		sec = Convert::ToString(Second);
+		min = Convert::ToString(Minute);
+		label2->Text = min + ":" + sec;
+	}
+
+	
+	
+
+	} */
+	
 /*	if (Second == 0)
 	{
 		Second = 30;
@@ -3615,23 +3841,10 @@ private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e)
 	
 
 	
-    if (Second == 30) {
-       
-        Second = 0;
-		timer1->Enabled = false;
-
-		MessageBox::Show("GAME OVER", "warning", MessageBoxButtons::OK, MessageBoxIcon::Information);
-
-
-    }
    
-    
-	sec = Convert::ToString(Second);
-	min = Convert::ToString(Minute);
-	label2->Text = min + ":" + sec;
 
     
-}
+
 private: System::Void dataGridView2_CellStateChanged(System::Object^ sender, System::Windows::Forms::DataGridViewCellStateChangedEventArgs^ e) {
 
 }
@@ -3660,8 +3873,8 @@ private: System::Void flowLayoutPanel1_Paint_1(System::Object^ sender, System::W
 }
 
 private: System::Void button38_Click(System::Object^ sender, System::EventArgs^ e) {
-	 Application::Restart();
-
+	Application::Restart();
+}
 	/*level1^ lvl = gcnew level1;
 	
 	this->Close();
@@ -3713,8 +3926,14 @@ private: System::Void button38_Click(System::Object^ sender, System::EventArgs^ 
 	label2->Text = "";
 	Bombs();*/
 
-}
+
 private: System::Void level1_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void backgroundWorker1_DoWork(System::Object^ sender, System::ComponentModel::DoWorkEventArgs^ e) {
+}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

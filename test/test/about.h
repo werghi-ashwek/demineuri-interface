@@ -35,7 +35,8 @@ namespace test {
 			}
 		}
 	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
+
 	protected:
 
 	private:
@@ -53,34 +54,38 @@ namespace test {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(about::typeid));
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// textBox1
 			// 
-			this->textBox1->BackColor = System::Drawing::Color::White;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Gilroy ExtraBold", 13.8F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+			this->textBox1->BackColor = System::Drawing::Color::LavenderBlush;
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 13.8F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(-1, 40);
+			this->textBox1->ForeColor = System::Drawing::Color::MidnightBlue;
+			this->textBox1->Location = System::Drawing::Point(203, 158);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(257, 451);
+			this->textBox1->Size = System::Drawing::Size(492, 257);
 			this->textBox1->TabIndex = 0;
 			this->textBox1->Text = resources->GetString(L"textBox1.Text");
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &about::textBox1_TextChanged);
 			// 
-			// button1
+			// button2
 			// 
-			this->button1->BackColor = System::Drawing::SystemColors::AppWorkspace;
-			this->button1->ForeColor = System::Drawing::SystemColors::MenuHighlight;
-			this->button1->Location = System::Drawing::Point(92, 437);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"Ok";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &about::button1_Click);
+			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->button2->Font = (gcnew System::Drawing::Font(L"Glitch Inside", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->ForeColor = System::Drawing::Color::Thistle;
+			this->button2->Location = System::Drawing::Point(1, 569);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(158, 32);
+			this->button2->TabIndex = 2;
+			this->button2->Text = L"Exit";
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &about::button2_Click);
 			// 
 			// about
 			// 
@@ -88,8 +93,9 @@ namespace test {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Beige;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(775, 517);
-			this->Controls->Add(this->button1);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(873, 604);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->textBox1);
 			this->Name = L"about";
 			this->Text = L"about";
@@ -105,6 +111,9 @@ namespace test {
 
 		this->Hide();
 
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		Application::Restart();
 	}
 	};
 };

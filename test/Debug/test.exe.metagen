@@ -1,5 +1,7 @@
   test.about.resources - Embedded, ContainedInManifestFile, 
   test.level1.resources - Embedded, ContainedInManifestFile, 
+  test.level2.resources - Embedded, ContainedInManifestFile, 
+  test.level3.resources - Embedded, ContainedInManifestFile, 
   test.MyForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly test, Version=0.0.*, Culture=Langue indifférente (Pays indifférent): 
@@ -22,6 +24,22 @@ Class test.about: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class test.level1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Lose(): PrivateScope, Public, HideBySig
+    Win(): PrivateScope, Public, HideBySig
+    Uncovertile(Int32): PrivateScope, Public, HideBySig
+    Bombs(): PrivateScope, Public, HideBySig
+Class test.level2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Lose(): PrivateScope, Public, HideBySig
+    Win(): PrivateScope, Public, HideBySig
+    Uncovertile(Int32): PrivateScope, Public, HideBySig
+    Bombs(): PrivateScope, Public, HideBySig
+Class test.level3: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:

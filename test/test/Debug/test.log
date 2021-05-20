@@ -1,6 +1,9 @@
 ﻿  MyForm.cpp
-C:\Users\Ashwek\OneDrive\Bureau\test\test\test\level1.h(3023,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-  level1.cpp
-C:\Users\Ashwek\OneDrive\Bureau\test\test\test\level1.h(3023,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\Ashwek\OneDrive\Bureau\test\test\test\level1.h(3126,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\Ashwek\OneDrive\Bureau\test\test\test\level2.h(7547,16): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\Ashwek\OneDrive\Bureau\test\test\test\level3.h(17050,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  level3.cpp
+C:\Users\Ashwek\OneDrive\Bureau\test\test\test\level3.h(17050,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
   Génération de code en cours...
-LINK : fatal error LNK1104: impossible d'ouvrir le fichier 'C:\Users\Ashwek\OneDrive\Bureau\test\test\Debug\test.exe'
+  about.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
+  test.vcxproj -> C:\Users\Ashwek\OneDrive\Bureau\test\test\Debug\test.exe

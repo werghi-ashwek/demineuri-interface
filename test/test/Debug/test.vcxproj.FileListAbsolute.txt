@@ -3,3 +3,5 @@ C:\Users\Ashwek\OneDrive\Bureau\test\test\test\Debug\test.MyForm.resources
 C:\Users\Ashwek\OneDrive\Bureau\test\test\test\Debug\test.vcxproj.GenerateResource.cache
 C:\Users\Ashwek\OneDrive\Bureau\test\test\test\Debug\test.about.resources
 C:\Users\Ashwek\OneDrive\Bureau\test\test\test\Debug\test.level1.resources
+C:\Users\Ashwek\OneDrive\Bureau\test\test\test\Debug\test.level2.resources
+C:\Users\Ashwek\OneDrive\Bureau\test\test\test\Debug\test.level3.resources
